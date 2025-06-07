@@ -1,8 +1,0 @@
-package testCases;
-
-import org.openqa.selenium.WebDriver;
-
-public class loginTest {
-
-
-}
