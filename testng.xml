@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite"><test verbose="2" preserve-order="true" name="/home/aditya/IdeaProjects/Toolshop">
+    <classes>
+<!--        <class name="testCases.homePageTest">-->
+<!--            <methods>-->
+<!--                <include name="signUPLogin"/>-->
+<!--            </methods>-->
+<!--        </class>-->
+        <class name="testCases.signUpLoginTest">
+            <methods>
+                <include name="presignup"/>
+            </methods>
+        </class>
+    </classes>
+</test>
+</suite>
