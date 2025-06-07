@@ -24,12 +24,12 @@ public class signUp extends basePage {
     WebElement firstName;
     @FindBy(xpath = "//input[@id='last_name']")
     WebElement lastName;
-    @FindBy(xpath = "//input[@id='company']")
-    WebElement company;
+//    @FindBy(xpath = "//input[@id='company']")
+//    WebElement company;
     @FindBy(xpath = "//input[@id='address1']")
     WebElement address;
-    @FindBy(xpath = "//input[@id='address2']")
-    WebElement address2;
+//    @FindBy(xpath = "//input[@id='address2']")
+//    WebElement address2;
     @FindBy(xpath = "//select[@id='country']")
     WebElement country;
     @FindBy(xpath = "//input[@id='state']")
@@ -44,6 +44,12 @@ public class signUp extends basePage {
     WebElement btnCreateAcc;
 
     //Actions
+    public void setGender(){
+        gender.click();
+    }
+    public void setPassword(){
+        password.sendKeys("dfs");
+    }
 
 
 

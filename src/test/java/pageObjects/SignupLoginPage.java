@@ -14,6 +14,7 @@ public class SignupLoginPage extends basePage {
     WebElement signupName;
     @FindBy(xpath = "//input[@data-qa='signup-email']")
     WebElement signupEmail;
+//    signup click locator and its action
 
 
     //Actions
@@ -23,5 +24,6 @@ public class SignupLoginPage extends basePage {
     public void setSignupEmail(String email){
         signupEmail.sendKeys(email);
     }
+
 
 }

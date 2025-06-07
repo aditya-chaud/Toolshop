@@ -9,7 +9,7 @@ public class homePage extends basePage {
             super(driver);
         }
         //Locators
-        @FindBy(xpath = "//a[normalize-space()='Signup / Login'") WebElement signUpLogin;
+        @FindBy(xpath = "//a[normalize-space()='Signup / Login']") WebElement signUpLogin;
 
 
         //Action methods
