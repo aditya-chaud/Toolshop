@@ -1,5 +1,6 @@
 package testBase;
 
+import net.bytebuddy.utility.RandomString;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -22,4 +23,9 @@ public class baseClass {
 //    public void tearDown(){
 //        driver.quit();
 //    }
+    public String generateRandomString(){
+        String genString= RandomString.make(5);
+//        System.out.println(genString);
+        return genString;
+    }
 }
