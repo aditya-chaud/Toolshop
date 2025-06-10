@@ -1,17 +1,11 @@
 package testCases;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pageObjects.SignupLoginPage;
 import pageObjects.homePage;
 import pageObjects.signUpPage;
 import testBase.baseClass;
-
-import java.time.Duration;
 
 public class signUpTest extends baseClass{
     @Test

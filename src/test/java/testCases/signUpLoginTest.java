@@ -1,8 +1,5 @@
 package testCases;
 
-import org.testng.annotations.Test;
-import pageObjects.SignupLoginPage;
-import pageObjects.homePage;
 import testBase.baseClass;
 
 public class signUpLoginTest extends baseClass {
