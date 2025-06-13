@@ -1,8 +1,8 @@
 package testCases;
 
-import testBase.baseClass;
+import testBase.testBase;
 
-public class signUpLoginTest extends baseClass {
+public class signUpLoginTest extends testBase {
 //    @Test
 //    public void presignup(){
 //        homePage hp=new homePage(driver);

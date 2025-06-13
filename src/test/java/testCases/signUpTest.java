@@ -5,9 +5,9 @@ import org.testng.annotations.Test;
 import pageObjects.SignupLoginPage;
 import pageObjects.homePage;
 import pageObjects.signUpPage;
-import testBase.baseClass;
+import testBase.testBase;
 
-public class signUpTest extends baseClass{
+public class signUpTest extends testBase {
     @Test
     public void verifySignUp(){
 

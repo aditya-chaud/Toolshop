@@ -1,8 +1,8 @@
 package testCases;
 
-import testBase.baseClass;
+import testBase.testBase;
 
-public class homePageTest extends baseClass {
+public class homePageTest extends testBase {
 //    @Test
 //    public void signUPLogin(){
 //        homePage hp=new homePage(driver);
