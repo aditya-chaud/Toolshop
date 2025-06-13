@@ -19,10 +19,10 @@ public class baseClass {
         driver.manage().window().maximize();
     }
 
-//    @AfterClass
-//    public void tearDown(){
-//        driver.quit();
-//    }
+    @AfterClass
+    public void tearDown(){
+        driver.quit();
+    }
     public String generateRandomString(){
         String genString= RandomString.make(5);
 //        System.out.println(genString);
