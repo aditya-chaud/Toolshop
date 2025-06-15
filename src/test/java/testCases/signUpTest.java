@@ -11,7 +11,7 @@ public class signUpTest extends testBase {
     @Test
     public void verifySignUp(){
 
-        //open homepage
+        //open homepage, here driver is declared in testBase class as public
         homePage hp=new homePage(driver);
         hp.setsignUpLogin();
 
@@ -25,11 +25,13 @@ public class signUpTest extends testBase {
 
         signup.setSignupName(signupName);
         signup.setSignupEmail(signupEmail);
-        signup.clicksignUpbtn();
+//        signup.clicksignUpbtn();
 
 
         //open signup/registration page
-        signUpPage reg=new signUpPage(driver);
+//        signUpPage reg=new signUpPage(driver);
+        //SignupLoginPage class is returning signUpPage object, so signUpPage constructor is called automatically
+        signUpPage reg=signup.clicksignUpbtn();
 
         String password=super.generateRandomString();
         System.out.println("Password: " + password);
@@ -39,7 +41,7 @@ public class signUpTest extends testBase {
         reg.setDOB("14","2","2000");
         reg.setFirstLastName(signupName, signupName);
         reg.setAddress("India");
-        reg.clickCreateAcc();
+//        reg.clickCreateAcc();
 
         //Assert to validate the result
         Assert.assertEquals(reg.getAccountCreationMessage(), "ACCOUNT CREATED!", "Account creation failed");

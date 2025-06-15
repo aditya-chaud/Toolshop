@@ -44,7 +44,7 @@ public class signUpPage extends basePage {
     @FindBy(xpath = "//button[normalize-space()='Create Account']")
     WebElement btnCreateAcc;
     @FindBy(xpath = "//b[normalize-space()='Account Created!']")
-    WebElement confirmation;
+    WebElement accCreationConfirmation;
     //Create select objects for dropdowns
     Select daydropd=new Select(days);
     Select monthdropd=new Select(month);
@@ -87,7 +87,7 @@ public class signUpPage extends basePage {
 
     //confirmation
     public String getAccountCreationMessage() {
-        return confirmation.getText();
+        return accCreationConfirmation.getText();
     }
 
 

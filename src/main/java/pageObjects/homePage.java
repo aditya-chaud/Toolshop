@@ -12,9 +12,12 @@ public class homePage extends basePage {
         @FindBy(xpath = "//a[normalize-space()='Signup / Login']") WebElement signUpLogin;
 
 
+
         //Action methods
         public void setsignUpLogin(){
             signUpLogin.click();
         }
+
+        //
 
 }
