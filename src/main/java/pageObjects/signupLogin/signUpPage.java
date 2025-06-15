@@ -1,9 +1,10 @@
-package pageObjects;
+package pageObjects.signupLogin;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
+import pageObjects.basePage;
 
 public class signUpPage extends basePage {
     public signUpPage(WebDriver driver){

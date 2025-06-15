@@ -1,8 +1,8 @@
-package testCases;
+package testCases.signupLoginT;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageObjects.SignupLoginPage;
+import pageObjects.signupLogin.SignupLoginPage;
 import pageObjects.homePage;
 import testBase.testBase;
 

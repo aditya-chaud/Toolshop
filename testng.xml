@@ -3,12 +3,12 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="/home/aditya/IdeaProjects/Toolshop">
         <classes>
-<!--            <class name="testCases.signUpLoginTest">-->
+<!--            <class name="testCases.signupLoginT.signUpLoginTest">-->
 <!--                <methods>-->
 <!--                    <include name="presignup"/>-->
 <!--                </methods>-->
 <!--            </class>-->
-            <class name="testCases.signUpTest">
+            <class name="testCases.signupLoginT.signUpTest">
                 <methods>
                     <include name="verifySignUp"/>
                 </methods>
