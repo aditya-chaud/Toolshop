@@ -8,7 +8,9 @@ import pageObjects.signupLogin.signUpPage;
 import testBase.testBase;
 
 public class signUpTest extends testBase {
-    @Test
+    String signupEmail;
+    String password;
+    @Test(priority = 1)
     public void verifySignUp(){
 
         //open homepage, here driver is declared in testBase class as public
@@ -19,7 +21,7 @@ public class signUpTest extends testBase {
         SignupLoginPage signup=new SignupLoginPage(driver);
 
         String signupName=super.generateRandomString();
-        String signupEmail=signupName+"@gmail.com";
+        signupEmail=signupName+"@gmail.com";
 
         System.out.println("Signupemail: " + signupEmail);
 
@@ -33,7 +35,7 @@ public class signUpTest extends testBase {
         //SignupLoginPage class is returning signUpPage object, so signUpPage constructor is called automatically
         signUpPage reg=signup.clicksignUpbtn();
 
-        String password=super.generateRandomString();
+        password=super.generateRandomString();
         System.out.println("Password: " + password);
 
         reg.setGender();
@@ -41,12 +43,23 @@ public class signUpTest extends testBase {
         reg.setDOB("14","2","2000");
         reg.setFirstLastName(signupName, signupName);
         reg.setAddress("India");
-//        reg.clickCreateAcc();
+        reg.clickCreateAcc();
 
         //Assert to validate the result
         Assert.assertEquals(reg.getAccountCreationMessage(), "ACCOUNT CREATED!", "Account creation failed");
+    }
 
-
+    //delete the created account
+    @Test(priority = 2, dependsOnMethods = "verifySignUp")
+    public void accDel(){
+        homePage hp=new homePage(driver);
+        hp.setsignUpLogin();
+        SignupLoginPage ln=new SignupLoginPage(driver);
+        ln.setEmailPass(signupEmail, password);
+        ln.clicklgnBth();
+        signUpPage sup=new signUpPage(driver);
+        sup.deleteAcc();
+        Assert.assertEquals(sup.getAccDelMessage(),"ACCOUNT DELETED!", "Account Deletion failed");
     }
 
 }

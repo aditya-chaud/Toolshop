@@ -21,9 +21,9 @@ public class signUpLoginTest extends testBase {
         //open homepage and click on signup/login
         hp.setsignUpLogin();
 
-        SignupLoginPage signup=new SignupLoginPage(driver);
+        SignupLoginPage ln=new SignupLoginPage(driver);
         //verify the login page
-        Assert.assertEquals(signup.verifyLoginPage(),"Login to your account");
+        Assert.assertEquals(ln.verifyLoginPage(),"Login to your account");
     }
     @Test(priority = 2)
     public void login(){
@@ -31,10 +31,10 @@ public class signUpLoginTest extends testBase {
         //open homepage and click on signup/login
         hp.setsignUpLogin();
 
-        SignupLoginPage signup=new SignupLoginPage(driver);
+        SignupLoginPage ln=new SignupLoginPage(driver);
         //pass the email n password
-        signup.setEmailPass(prop.getProperty("email"), prop.getProperty("password"));
-        signup.clicklgnBth();
-        Assert.assertEquals(signup.verifyLogin(), "3fQBX");
+        ln.setEmailPass(prop.getProperty("email"), prop.getProperty("password"));
+        ln.clicklgnBth();
+        Assert.assertEquals(ln.verifyLogin(), "3fQBX");
     }
 }

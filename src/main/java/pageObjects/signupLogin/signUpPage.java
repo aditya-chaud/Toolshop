@@ -12,45 +12,28 @@ public class signUpPage extends basePage {
     }
 
     //locators
-    @FindBy(xpath = "//input[@id='id_gender1']")
-    WebElement gender;
-    @FindBy(xpath = "//input[@id='password']")
-    WebElement password;
-    @FindBy(xpath = "//select[@id='days']")
-    WebElement days;
-    @FindBy(xpath = "//select[@id='months']")
-    WebElement month;
-    @FindBy(xpath = "//select[@id='years']")
-    WebElement year;
-    @FindBy(xpath = "//input[@id='first_name']")
-    WebElement firstName;
-    @FindBy(xpath = "//input[@id='last_name']")
-    WebElement lastName;
+    @FindBy(xpath = "//input[@id='id_gender1']") WebElement gender;
+    @FindBy(xpath = "//input[@id='password']") WebElement password;
+    @FindBy(xpath = "//select[@id='days']") WebElement days;
+    @FindBy(xpath = "//select[@id='months']") WebElement month;
+    @FindBy(xpath = "//select[@id='years']") WebElement year;
+    @FindBy(xpath = "//input[@id='first_name']") WebElement firstName;
+    @FindBy(xpath = "//input[@id='last_name']") WebElement lastName;
 //    @FindBy(xpath = "//input[@id='company']")
 //    WebElement company;
-    @FindBy(xpath = "//input[@id='address1']")
-    WebElement address;
+    @FindBy(xpath = "//input[@id='address1']") WebElement address;
 //    @FindBy(xpath = "//input[@id='address2']")
 //    WebElement address2;
-    @FindBy(xpath = "//select[@id='country']")
-    WebElement country;
-    @FindBy(xpath = "//input[@id='state']")
-    WebElement state;
-    @FindBy(xpath = "//input[@id='city']")
-    WebElement city;
-    @FindBy(xpath = "//input[@id='zipcode']")
-    WebElement zipcode;
+    @FindBy(xpath = "//select[@id='country']") WebElement country;
+    @FindBy(xpath = "//input[@id='state']") WebElement state;
+    @FindBy(xpath = "//input[@id='city']") WebElement city;
+    @FindBy(xpath = "//input[@id='zipcode']") WebElement zipcode;
     @FindBy(xpath = "//input[@id='mobile_number']")
     WebElement mobileNumber;
-    @FindBy(xpath = "//button[normalize-space()='Create Account']")
-    WebElement btnCreateAcc;
-    @FindBy(xpath = "//b[normalize-space()='Account Created!']")
-    WebElement accCreationConfirmation;
-    //Create select objects for dropdowns
-    Select daydropd=new Select(days);
-    Select monthdropd=new Select(month);
-    Select yeardropd=new Select(year);
-    Select countrydropd=new Select(country);
+    @FindBy(xpath = "//button[normalize-space()='Create Account']") WebElement btnCreateAcc;
+    @FindBy(xpath = "//b[normalize-space()='Account Created!']") WebElement accCreationConfirmation;
+    @FindBy(xpath = "//a[normalize-space()='Delete Account']") WebElement delAcc;
+    @FindBy(xpath = "//b[normalize-space()='Account Deleted!']") WebElement delAccConfirmation;
 
     //Actions Methods
     public void setGender(){
@@ -61,9 +44,9 @@ public class signUpPage extends basePage {
     }
 
     public void setDOB(String Day, String Month, String Year){
-        daydropd.selectByValue(Day);
-        monthdropd.selectByValue(Month);
-        yeardropd.selectByValue(Year);
+        new Select(days).selectByValue(Day);
+        new Select(month).selectByValue(Month);
+        new Select(year).selectByValue(Year);
     }
 
     public void setFirstLastName(String fName, String lName){
@@ -72,9 +55,9 @@ public class signUpPage extends basePage {
     }
 
     //set addresses
-    public void setAddress(String country){
+    public void setAddress(String ctry){
         address.sendKeys("balkot");
-        countrydropd.selectByValue(country);
+        new Select(country).selectByValue(ctry);
         state.sendKeys("Bagmati");
         city.sendKeys("KTM");
         zipcode.sendKeys("01221");
@@ -91,8 +74,13 @@ public class signUpPage extends basePage {
         return accCreationConfirmation.getText();
     }
 
-
-
+//    //delete account
+    public void deleteAcc(){
+        delAcc.click();
+    }
+    public String getAccDelMessage(){
+        return delAccConfirmation.getText();
+    }
 
 
 
