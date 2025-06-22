@@ -15,6 +15,7 @@ public class homePage extends basePage {
 
 
 
+
         //Action methods
         public void setsignUpLogin(){
             signUpLogin.click();

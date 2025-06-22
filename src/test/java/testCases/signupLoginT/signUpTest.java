@@ -38,6 +38,7 @@ public class signUpTest extends testBase {
         password=super.generateRandomString();
         System.out.println("Password: " + password);
 
+        //default set for now
         reg.setGender();
         reg.setPassword(password);
         reg.setDOB("14","2","2000");

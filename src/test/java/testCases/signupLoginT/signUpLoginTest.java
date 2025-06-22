@@ -37,4 +37,17 @@ public class signUpLoginTest extends testBase {
         ln.clicklgnBth();
         Assert.assertEquals(ln.verifyLogin(), "3fQBX");
     }
+    @Test(priority=3)
+    public void logout(){
+        homePage hp=new homePage(driver);
+        hp.setsignUpLogin();
+        SignupLoginPage ln=new SignupLoginPage(driver);
+        ln.setEmailPass(prop.getProperty("email"), prop.getProperty("password"));
+        ln.clicklgnBth();
+        Assert.assertEquals(ln.logOut(), "Automation Exercise - Signup / Login" );
+
+
+
+    }
+
 }

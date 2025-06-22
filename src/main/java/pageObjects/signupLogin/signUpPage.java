@@ -74,10 +74,11 @@ public class signUpPage extends basePage {
         return accCreationConfirmation.getText();
     }
 
-//    //delete account
+    //delete account
     public void deleteAcc(){
         delAcc.click();
     }
+    //delete acc confirmation
     public String getAccDelMessage(){
         return delAccConfirmation.getText();
     }

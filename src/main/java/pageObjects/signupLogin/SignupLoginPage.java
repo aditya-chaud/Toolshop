@@ -27,6 +27,9 @@ public class SignupLoginPage extends basePage {
     @FindBy(xpath="//button[normalize-space()='Login']") WebElement lgnBtn;
     @FindBy(xpath = "//b[normalize-space()='3fQBX']") WebElement loggedInAs;
 
+   //locators for logout
+    @FindBy(xpath = "//a[normalize-space()='Logout']") WebElement logOut;
+
 
 
     //Actions for signup
@@ -55,6 +58,12 @@ public class SignupLoginPage extends basePage {
     }
     public String verifyLogin(){
         return loggedInAs.getText();
+    }
+
+    //Actions for logout
+    public String logOut(){
+        logOut.click();
+        return driver.getTitle();
     }
 
 
