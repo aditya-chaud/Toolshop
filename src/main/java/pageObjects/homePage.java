@@ -10,24 +10,16 @@ public class homePage extends basePage {
         }
         //Locators
         @FindBy(xpath = "//a[normalize-space()='Signup / Login']") WebElement signUpLogin;
-//        @FindBy(xpath = "//a[normalize-space()='Delete Account']") WebElement delAcc;
-//        @FindBy(xpath = "//b[normalize-space()='Account Deleted!']") WebElement delAccConfirmation;
-
-
-
+        @FindBy(xpath = "//a[@href='/products']") WebElement products;
 
         //Action methods
         public void setsignUpLogin(){
             signUpLogin.click();
         }
 
-        //delete account
-//        public void deleteAcc(){
-//            delAcc.click();
-//        }
-//        public String getAccDelMessage() {
-//            return delAccConfirmation.getText();
-//            //
-//        }
+        public void clickProducts(){
+            products.click();
+        }
+
 
 }

@@ -13,7 +13,7 @@ public class signUpTest extends testBase {
     @Test(priority = 1)
     public void verifySignUp(){
 
-        //open homepage, here driver is declared in testBase class as public
+        //open homepage, here driver is declared in parent class testBase as public
         homePage hp=new homePage(driver);
         hp.setsignUpLogin();
 
