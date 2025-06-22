@@ -25,7 +25,9 @@ public class searchProductPage extends basePage{
         search.click();
     }
     public String searchConfirm(){
-        return searchedConfirmation.getText();
+//        return searchedConfirmation.getText();
+        return driver.getCurrentUrl();
     }
+
 
 }

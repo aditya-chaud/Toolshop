@@ -15,11 +15,13 @@ public class searchProductTest extends testBase{
     }
     @Test
     public void verifySearch(){
+        String searchtxt="tshirt";
         homePage hp= new homePage(driver);
         hp.clickProducts();
         searchProductPage spg=new searchProductPage(driver);
-        spg.search("tshirt");
-        Assert.assertEquals(spg.searchConfirm(), "SEARCHED PRODUCTS");
+        spg.search(searchtxt);
+//        Assert.assertEquals(spg.searchConfirm(), "SEARCHED PRODUCTS");
+        Assert.assertTrue(spg.searchConfirm().contains(searchtxt));
     }
 
 }
